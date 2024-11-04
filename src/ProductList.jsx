@@ -8,6 +8,7 @@ function ProductList() {
     const [addedToCart, setAddedToCart] = useState({});
     const [showPlants, setShowPlants] = useState(false);
 
+
     const dispatch = useDispatch()
 
     const plantsArray = [
@@ -254,7 +255,7 @@ function ProductList() {
 
     const handleAddToCart = (plant) => {
         dispatch(addItem(plant))
-        setAddedToCart((items) => ({...items,  [plant.name]: true}))
+        setAddedToCart((prevPlants) => ({...prevPlants,  [plant.name]: true}))
     }
 
     return (
