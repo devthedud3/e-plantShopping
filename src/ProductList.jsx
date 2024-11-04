@@ -288,7 +288,7 @@ function ProductList() {
                                         <img className="product-image" src={plant.image} alt={plant.name} />
                                         <div className="product-title">{plant.name}</div>
 
-                                        <button className="product-button" onClick={() => handleAddToCart(plant)}>{ addedToCart[plant.name] ? "Added to Cart" : "Add to Cart" }</button>
+                                        <button className="product-button" onClick={() => handleAddToCart(plant)} disabled={addedToCart[plant.name]}>Add to Cart</button>
                                     </div>
                                 ))}
                             </div>
